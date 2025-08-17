@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #d3740e;
+    --text-color: #0070f0;
+    --gray-text: #343131;
+    --card-bg: #2a2828;
+}
+
+body {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+.gray {
+    color: var(--gray-text);
+}
+
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    background-color: var(--card-bg);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.card:hover {
+    background-color: #555;
+}
+
+
+.card a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
