@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="StepHub - найкращий сайт для придбання взуття на будь-який смак">
     <title>StepHub Shop</title>
-    <link rel="stylesheet" href="styles/style.css"> </head>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
 <body>
+    <div id="notification-container"></div>
     <header>
         <h1>StepHub</h1>
         <nav>
             <ul>
-                <li><a href="#products">Товари</a></li>
+                <li><a href="#shoes">Товари</a></li>
                 <li><a href="#about-us">Про нас</a></li>
                 <li><a href="#blog">Блог</a></li>
+                <li><a href="#basket">Кошик</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +29,7 @@
         </section>
 
         <section id="blog" class="info-links">
-            <h2>Інформація</h2>
+            <h2>Корисне</h2>
             <div class="card">
                 <h3><a href="/blog">Блог</a></h3>
             </div>
@@ -39,7 +43,30 @@
 
         <section id="products" class="products">
             <h2>Нові надходження</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Взуття+1" alt="Назва товару">
+                            <h3>Класичні кросівки</h3>
+                        <p class="price">2 500 грн</p>
+                     <a href="#" class="buy-button">Купити</a>
+                     </article>
+
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Взуття+2" alt="Назва товару">
+                            <h3>Зимові черевики</h3>
+                                <p class="price">4 200 грн</p>
+                             <a href="#" class="buy-button">Купити</a>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Взуття+3" alt="Назва товару">
+                        <h3>Літні сандалі</h3>
+                            <p class="price">1 800 грн</p>
+                        <a href="#" class="buy-button">Купити</a>
+                    </article>
+                </div>
             </section>
+
+
 
         <section class="products">
             <h2>Популярні товари</h2>
@@ -58,7 +85,9 @@
     </main>
 
     <footer>
+    <footer>
         <p>&copy; 2025 StepHub. Усі права захищені.</p>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
