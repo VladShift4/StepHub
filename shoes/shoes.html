@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="description" content="Колекція взуття від StepHub">
+    <title>Наша колекція — StepHub</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="notification-container"></div>
+    <header>
+        <a href="../index.html" class="logo">StepHub</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html#products">Новинки</a></li>
+                <li><a href="../index.html#about-us">Про нас</a></li>
+                <li><a href="#basket">Кошик <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="catalog">
+            <div class="container">
+                <h2>Наша колекція</h2>
+                <div class="product-controls">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Пошук за назвою...">
+                    </div>
+                    <div class="filters-wrapper">
+                        <select id="categoryFilter">
+                            <option value="all">Всі категорії</option>
+                            <option value="sneakers">Кросівки</option>
+                            <option value="boots">Черевики</option>
+                            <option value="sandals">Сандалі</option>
+                        </select>
+                        <select id="sortFilter">
+                            <option value="default">Сортування</option>
+                            <option value="price-asc">Від дешевших до дорожчих</option>
+                            <option value="price-desc">Від дорожчих до дешевших</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="product-catalog-grid" class="product-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.instagram.com/step_hub_?utm_source=qr&igsh=YXcydjZzZTFwbGU4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@step_hub_?_t=ZM-8z2MX95FMZy&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2025 StepHub. Усі права захищені.</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

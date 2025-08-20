@@ -4,89 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="StepHub - найкращий сайт для придбання взуття на будь-який смак">
-    <title>StepHub Shop</title>
+    <title>StepHub — Ваш стиль, ваш крок</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <div id="notification-container"></div>
+
     <header>
-        <h1>StepHub</h1>
+        <a href="#" class="logo">StepHub</a>
         <nav>
             <ul>
-                <li><a href="products">Товари</a></li>
+                <li><a href="#products">Новинки</a></li>
                 <li><a href="#about-us">Про нас</a></li>
-                <li><a href="#blog">Блог</a></li>
-                <li><a href="#basket">Кошик</a></li>
+                <li><a href="#blog">Корисне</a></li>
+                <li><a href="#basket">Кошик <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about-us" class="about-us">
-            <h2 class="gray">Про нас</h2>
-            <p><strong>StepHub</strong> — це команда з <em>трьох</em> розробників, що створили найкращий магазин взуття.</p>
-        </section>
-
-        <section id="blog" class="info-links">
-            <h2>Корисне</h2>
-            <div class="card">
-                <h3><a href="/blog">Блог</a></h3>
-            </div>
-            <div class="card">
-                <h3 ><a href="/articles">Статті</a></h3>
-            </div>
-            <div class="card">
-                <h3><a href="/news">Новини</a></h3>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Знайди свою ідеальну пару</h1>
+                <p>Найкращі бренди та ексклюзивні моделі для вашого стилю.</p>
+                <a href="shoes/shoes.html" class="cta-button">Переглянути колекцію</a>
             </div>
         </section>
 
         <section id="products" class="products">
             <h2>Нові надходження</h2>
-                <div class="product-grid">
-                    <article class="product-card">
-                        <img src="images/classic-shoes.jpg" alt="Класичні кросівки Nike" title="Класичні кросівки">
-                            <h3>Класичні кросівки</h3>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/classic-shoes.jpg" alt="Класичні кросівки Nike">
+                    </div>
+                    <div class="product-info">
+                        <h3>Класичні кросівки</h3>
                         <p class="price">2 500 грн</p>
-                     <a href="#" class="buy-button">Купити</a>
-                     </article>
+                        <a href="#" class="buy-button">Додати до кошика</a>
+                    </div>
+                </article>
 
-                    <article class="product-card">
-                        <img src="images/winter-boots.jpg" alt="Зимові чоботи 'Adidas'" title="Зимові чоботи 'Adidas'">
-                            <h3>Зимові черевики</h3>
-                                <p class="price">4 200 грн</p>
-                             <a href="#" class="buy-button">Купити</a>
-                    </article>
-                    <article class="product-card">
-                        <img src="images/summer-sandals.jpg" alt="Літні сандалі Babibas" title="Літні сандалі Babibas>"/>
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/winter-boots.jpg" alt="Зимові чоботи 'Adidas'">
+                    </div>
+                    <div class="product-info">
+                        <h3>Зимові черевики</h3>
+                        <p class="price">4 200 грн</p>
+                        <a href="#" class="buy-button">Додати до кошика</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/summer-sandals.jpg" alt="Літні сандалі Babibas">
+                    </div>
+                     <div class="product-info">
                         <h3>Літні сандалі</h3>
-                            <p class="price">1 800 грн</p>
-                        <a href="#" class="buy-button">Купити</a>
-                    </article>
-                </div>
-            </section>
-
-
-
-        <section class="products">
-            <h2>Популярні товари</h2>
-            </section>
-
-        <section class="social-media">
-            <h2>Ми в соцмережах</h2>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://tiktok.com">TikTok</a>
+                        <p class="price">1 800 грн</p>
+                        <a href="#" class="buy-button">Додати до кошика</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <aside class="ads">
-            <h3>Реклама</h3>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer">Google - знайдеться все!</a>
-        </aside>
+        <section id="about-us" class="about-us">
+            <h2>Про нас</h2>
+            <p><strong>StepHub</strong> — це не просто магазин. Це місце, де стиль зустрічається з комфортом. Наша команда з трьох розробників створила цей проєкт з любов'ю до якісного взуття.</p>
+        </section>
+
+        <section id="blog" class="info-links">
+            <h2>Корисні посилання</h2>
+            <div class="info-grid">
+                <a href="/blog" class="card">
+                    <h3><i class="fas fa-newspaper"></i> Наш Блог</h3>
+                    <p>Останні тренди та поради по догляду.</p>
+                </a>
+                <a href="/articles" class="card">
+                    <h3><i class="fas fa-book-open"></i> Статті</h3>
+                    <p>Глибокі огляди матеріалів та технологій.</p>
+                </a>
+                <a href="/news" class="card">
+                    <h3><i class="fas fa-bullhorn"></i> Новини</h3>
+                    <p>Акції, знижки та нові надходження.</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
+        <div class="social-media">
+            <a href="https://www.instagram.com/step_hub_?utm_source=qr&igsh=YXcydjZzZTFwbGU4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@step_hub_?_t=ZM-8z2MX95FMZy&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
         <p>&copy; 2025 StepHub. Усі права захищені.</p>
     </footer>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
