@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Колекція взуття від StepHub">
     <title>Наша колекція — StepHub</title>
     <link rel="stylesheet" href="../styles/style.css">
@@ -16,6 +16,8 @@
             <ul>
                 <li><a href="../index.html#products">Новинки</a></li>
                 <li><a href="../index.html#about-us">Про нас</a></li>
+                <li><a href="#blog">Корисне</a></li>
+                <li><a href="https://t.me/stephub_support">Підтримка <i class="fas fa-headset"></i></a></li>
                 <li><a href="#basket">Кошик <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
@@ -24,29 +26,61 @@
         <section class="catalog">
             <div class="container">
                 <h2>Наша колекція</h2>
-                <div class="product-controls">
-                    <div class="search-wrapper">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="Пошук за назвою...">
-                    </div>
-                    <div class="filters-wrapper">
-                        <select id="categoryFilter">
-                            <option value="all">Всі категорії</option>
-                            <option value="sneakers">Кросівки</option>
-                            <option value="boots">Черевики</option>
-                            <option value="sandals">Сандалі</option>
-                        </select>
-                        <select id="sortFilter">
-                            <option value="default">Сортування</option>
-                            <option value="price-asc">Від дешевших до дорожчих</option>
-                            <option value="price-desc">Від дорожчих до дешевших</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="product-catalog-grid" class="product-grid">
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="../images/classic-sneakers.jpg" alt="Класичні кросівки Nike">
+                        </div>
+                        <div class="product-info">
+                            <a href="../shoes/classic-sneakers.html"><h3>Класичні кросівки</h3></a>
+                            <p class="price">2 500 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="../images/winter-boots.jpg" alt="Зимові черевики 'Adidas'">
+                        </div>
+                        <div class="product-info">
+                            <a href="../shoes/winter-boots.html"><h3>Зимові черевики</h3></a>
+                            <p class="price">4 200 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="../images/summer-sandals.jpg" alt="Літні сандалі Babibas">
+                        </div>
+                         <div class="product-info">
+                            <a href="../shoes/summer-sandals.html"><h3>Літні сандалі</h3></a>
+                            <p class="price">1 800 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
                     </div>
             </div>
         </section>
+        <section id="blog" class="info-links">
+            <h2>Корисні посилання</h2>
+            <div class="info-grid">
+                <a href="/blog" class="card">
+                    <h3><i class="fas fa-newspaper"></i> Наш Блог</h3>
+                    <p>Останні тренди та поради по догляду.</p>
+                </a>
+                <a href="/articles" class="card">
+                    <h3><i class="fas fa-book-open"></i> Статті</h3>
+                    <p>Глибокі огляди матеріалів та технологій.</p>
+                </a>
+                <a href="/news" class="card">
+                    <h3><i class="fas fa-bullhorn"></i> Новини</h3>
+                    <p>Акції, знижки та нові надходження.</p>
+                </a>
+            </div>
+        </section>
+
     </main>
     <footer>
         <div class="social-media">
@@ -55,7 +89,6 @@
         </div>
         <p>&copy; 2025 StepHub. Усі права захищені.</p>
     </footer>
-
     <script src="../scripts/script.js"></script>
 </body>
 </html>
