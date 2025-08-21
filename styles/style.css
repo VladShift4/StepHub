@@ -3,8 +3,8 @@
 
 :root {
     --primary-color: #2c3e50; /* Темно-синій */
-    --secondary-color: #3498db; /* Яскраво-синій */
-    --accent-color: #2980b9; /* Насичений синій для кнопок */
+    --secondary-color: #eb8648; /* Яскраво-синій */
+    --accent-color: #e6b072; /* Насичений синій для кнопок */
     --background-color: #ecf0f1; /* Дуже світло-сірий */
     --surface-color: #ffffff; /* Білий для карток */
     --text-color: #34495e; /* Темно-сірий текст */
@@ -40,9 +40,23 @@ header {
 
 .logo {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
+    transition:var(--accent-color) ease-in-out;
+    animation: glow 4s ease-in-out infinite alternate;
+
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
+        color: #000;
+    }
+    to {
+        text-shadow: 0 0 15px rgba(231, 159, 112, 0.8);
+        color: #ff6600;
+    }
 }
 
 header nav ul {
@@ -204,6 +218,10 @@ h2 {
 .product-card h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
+    text-decoration: none;
+    transition:var(--accent-color) ease-in-out;
+    animation: glow 3s ease-in-out infinite alternate;
+    font-weight: bold;
 }
 
 .price {
@@ -271,7 +289,7 @@ footer {
     text-align: center;
     padding: 3rem 2rem;
     background-color: var(--primary-color);
-    color: #bdc3c7;
+    color: #ffffff;
 }
 
 .social-media {
@@ -339,7 +357,7 @@ footer {
 }
 
 
-/* --- Початок коду для сторінки каталогу товарів (products.html) --- */
+/* --- Початок коду для сторінки каталогу товарів (shoes.html) --- */
 
 .catalog-container {
     max-width: 1200px;
