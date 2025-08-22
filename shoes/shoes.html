@@ -14,7 +14,7 @@
         <a href="../index.html" class="logo">StepHub Shop</a>
         <nav>
             <ul>
-                <li><a href="../index.html#products">Новинки</a></li>
+                <li><a href=".../news/news.html">Новини</a></li>
                 <li><a href="../index.html#about-us">Про нас</a></li>
                 <li><a href="#blog">Корисне</a></li>
                 <li><a href="https://t.me/stephub_support">Підтримка <i class="fas fa-headset"></i></a></li>
@@ -26,37 +26,79 @@
         <section class="catalog">
             <div class="container">
                 <h2>Наша колекція</h2>
+                <div class="product-controls">
+                    <div class="search-wrapper">
+                        <input type="text" id="searchInput" placeholder="Пошук товарів...">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <select id="sortFilter">
+                        <option value="">Сортувати за</option>
+                        <option value="price-asc">Ціна ↑</option>
+                         <option value="price-desc">Ціна ↓</option>
+                    </select>
 
-                <div class="product-grid">
+                    <datalist id="sortFilter">
+                        <option value="">Види взуття</option>
+                        <option value="кросівки"></option>
+                        <option value="черевики"></option>
+                        <option value="сандалі"></option>
+                    </datalist>
+                </div>
+
+
+                <div class="product-grid" id="catalog-grid">
                     <article class="product-card">
                         <div class="product-image-container">
                             <img src="../images/classic-sneakers.jpg" alt="Класичні кросівки Puma" title="Класичні кросівки Puma">
                         </div>
-                        <div class="product-info">
-                            <a href="../shoes/classic-sneakers.html"><h3>Класичні кросівки 'Puma'</h3></a>
-                            <p class="price">2 500 грн</p>
-                            <a href="#" class="buy-button">Додати до кошика</a>
-                        </div>
-                    </article>
+                <div class="product-info">
+                    <a href="../shoes/classic-sneakers.html"><h3>Класичні кросівки 'Puma'</h3></a>
+                    <p class="price">2 500 грн</p>
+                    <a href="#" class="buy-button">Додати до кошика</a>
+                </div>
+            </article>
 
-                    <article class="product-card">
-                        <div class="product-image-container">
-                            <img src="../images/winter-boots.jpg" alt="Зимові черевики 'Jhordans'" title="Літні сандалі Jhordans">
-                        </div>
-                        <div class="product-info">
-                            <a href="../shoes/winter-boots.html"><h3>Зимові черевики 'Jhordans'</h3></a>
-                            <p class="price">4 200 грн</p>
-                            <a href="#" class="buy-button">Додати до кошика</a>
-                        </div>
-                    </article>
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="../images/winter-boots.jpg" alt="Зимові черевики 'Jhordans'" title="Зимові черевики 'Jhordans'">
+                </div>
+                <div class="product-info">
+                    <a href="../shoes/winter-boots.html"><h3>Зимові черевики 'Jhordans'</h3></a>
+                    <p class="price">4 200 грн</p>
+                    <a href="#" class="buy-button">Додати до кошика</a>
+                </div>
+            </article>
+
 
                     <article class="product-card">
                         <div class="product-image-container">
                             <img src="../images/summer-sandals.jpg" alt="Літні сандалі Adidas" title="Літні сандалі Adidas">
                         </div>
-                         <div class="product-info">
+                        <div class="product-info">
                             <a href="../shoes/summer-sandals.html"><h3>Літні сандалі 'Adidas'</h3></a>
                             <p class="price">1 800 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="../images/new-balance-1.jpg" alt="Бігові кросівки New Balance" title="Бігові кросівки New Balance">
+                        </div>
+                        <div class="product-info">
+                            <a href="../shoes/new-balance.html"><h3>New Balance 900</h3></a>
+                            <p class="price">4299 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="../images/asics-sneakers.jpg" alt="Бігові кросівки Asics чоловічі" title="Бігові кросівки Asics чоловічі">
+                        </div>
+                        <div class="product-info">
+                            <a href="../shoes/asics-sneakers.html"><h3>Бігові кросівки Asics чоловічі</h3></a>
+                            <p class="price">4 899 грн</p>
                             <a href="#" class="buy-button">Додати до кошика</a>
                         </div>
                     </article>
