@@ -14,10 +14,10 @@
         <a href="../index.html" class="logo">StepHub Shop</a>
         <nav>
             <ul>
-                <li><a href=".../news/news.html">Новини</a></li>
+                <li><a href="../news/news.html">Новини</a></li>
                 <li><a href="../index.html#about-us">Про нас</a></li>
                 <li><a href="#blog">Корисне</a></li>
-                <li><a href="https://t.me/stephub_support">Підтримка <i class="fas fa-headset"></i></a></li>
+                <li><a href="https://t.me/stephub_support_bot">Підтримка <i class="fas fa-headset"></i></a></li>
                 <li><a href="#basket">Кошик <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
@@ -26,104 +26,87 @@
         <section class="catalog">
             <div class="container">
                 <h2>Наша колекція</h2>
+
                 <div class="product-controls">
                     <div class="search-wrapper">
                         <input type="text" id="searchInput" placeholder="Пошук товарів...">
-                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        <button class="search-btn" aria-label="Пошук"><i class="fas fa-search"></i></button>
                     </div>
-                    <select id="sortFilter">
-                        <option value="">Сортувати за</option>
-                        <option value="price-asc">Ціна ↑</option>
-                         <option value="price-desc">Ціна ↓</option>
+
+                    <select id="categoryFilter">
+                        <option value="all">Всі види</option>
+                        <option value="кросівки">Кросівки</option>
+                        <option value="черевики">Черевики</option>
+                        <option value="сандалі">Сандалі</option>
                     </select>
 
-                    <datalist id="sortFilter">
-                        <option value="">Види взуття</option>
-                        <option value="кросівки"></option>
-                        <option value="черевики"></option>
-                        <option value="сандалі"></option>
-                    </datalist>
+                    <select id="sortFilter">
+                        <option value="default">Сортувати за</option>
+                        <option value="price-asc">Ціна ↑</option>
+                        <option value="price-desc">Ціна ↓</option>
+                    </select>
                 </div>
-
 
                 <div class="product-grid" id="catalog-grid">
-                    <article class="product-card">
+                    <article class="product-card" data-price="2500" data-category="кросівки" data-name="Класичні кросівки 'Puma'">
                         <div class="product-image-container">
-                            <img src="../images/classic-sneakers.jpg" alt="Класичні кросівки Puma" title="Класичні кросівки Puma">
-                        </div>
-                <div class="product-info">
-                    <a href="../shoes/classic-sneakers.html"><h3>Класичні кросівки 'Puma'</h3></a>
-                    <p class="price">2 500 грн</p>
-                    <a href="#" class="buy-button">Додати до кошика</a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image-container">
-                    <img src="../images/winter-boots.jpg" alt="Зимові черевики 'Jhordans'" title="Зимові черевики 'Jhordans'">
-                </div>
-                <div class="product-info">
-                    <a href="../shoes/winter-boots.html"><h3>Зимові черевики 'Jhordans'</h3></a>
-                    <p class="price">4 200 грн</p>
-                    <a href="#" class="buy-button">Додати до кошика</a>
-                </div>
-            </article>
-
-
-                    <article class="product-card">
-                        <div class="product-image-container">
-                            <img src="../images/summer-sandals.jpg" alt="Літні сандалі Adidas" title="Літні сандалі Adidas">
+                            <img src="../images/classic-sneakers.jpg" alt="Класичні кросівки Puma">
                         </div>
                         <div class="product-info">
-                            <a href="../shoes/summer-sandals.html"><h3>Літні сандалі 'Adidas'</h3></a>
+                            <a href="classic-sneakers.html"><h3>Класичні кросівки 'Puma'</h3></a>
+                            <p class="price">2 500 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-price="4200" data-category="черевики" data-name="Зимові черевики 'Jhordans'">
+                        <div class="product-image-container">
+                            <img src="../images/winter-boots.jpg" alt="Зимові черевики 'Jhordans'">
+                        </div>
+                        <div class="product-info">
+                            <a href="winter-boots.html"><h3>Зимові черевики 'Jhordans'</h3></a>
+                            <p class="price">4 200 грн</p>
+                            <a href="#" class="buy-button">Додати до кошика</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-price="1800" data-category="сандалі" data-name="Літні сандалі 'Adidas'">
+                        <div class="product-image-container">
+                            <img src="../images/summer-sandals.jpg" alt="Літні сандалі Adidas">
+                        </div>
+                        <div class="product-info">
+                            <a href="summer-sandals.html"><h3>Літні сандалі 'Adidas'</h3></a>
                             <p class="price">1 800 грн</p>
                             <a href="#" class="buy-button">Додати до кошика</a>
                         </div>
                     </article>
 
-                    <article class="product-card">
+                    <article class="product-card" data-price="4299" data-category="кросівки" data-name="New Balance 900">
                         <div class="product-image-container">
-                            <img src="../images/new-balance-1.jpg" alt="Бігові кросівки New Balance" title="Бігові кросівки New Balance">
+                            <img src="../images/new-balance-1.jpg" alt="New Balance 900">
                         </div>
                         <div class="product-info">
-                            <a href="../shoes/new-balance.html"><h3>New Balance 900</h3></a>
-                            <p class="price">4299 грн</p>
+                            <a href="new-balance.html"><h3>New Balance 900</h3></a>
+                            <p class="price">4 299 грн</p>
                             <a href="#" class="buy-button">Додати до кошика</a>
                         </div>
                     </article>
 
-                    <article class="product-card">
+                    <article class="product-card" data-price="4899" data-category="кросівки" data-name="Бігові кросівки Asics чоловічі">
                         <div class="product-image-container">
-                            <img src="../images/asics-sneakers.jpg" alt="Бігові кросівки Asics чоловічі" title="Бігові кросівки Asics чоловічі">
+                            <img src="../images/asics-sneakers.jpg" alt="Бігові кросівки Asics чоловічі">
                         </div>
                         <div class="product-info">
-                            <a href="../shoes/asics-sneakers.html"><h3>Бігові кросівки Asics чоловічі</h3></a>
+                            <a href="asics-sneakers.html"><h3>Бігові кросівки Asics чоловічі</h3></a>
                             <p class="price">4 899 грн</p>
                             <a href="#" class="buy-button">Додати до кошика</a>
                         </div>
                     </article>
-                    </div>
-            </div>
-        </section>
-        <section id="blog" class="info-links">
-            <h2>Корисні посилання</h2>
-            <div class="info-grid">
-                <a href="/blog" class="card">
-                    <h3><i class="fas fa-newspaper"></i> Наш Блог</h3>
-                    <p>Останні тренди та поради по догляду.</p>
-                </a>
-                <a href="/articles" class="card">
-                    <h3><i class="fas fa-book-open"></i> Статті</h3>
-                    <p>Глибокі огляди матеріалів та технологій.</p>
-                </a>
-                <a href="/news" class="card">
-                    <h3><i class="fas fa-bullhorn"></i> Новини</h3>
-                    <p>Акції, знижки та нові надходження.</p>
-                </a>
+                </div>
             </div>
         </section>
 
-    </main>
+        </main>
     <footer>
         <div class="social-media">
             <a href="https://www.instagram.com/step_hub_?utm_source=qr&igsh=YXcydjZzZTFwbGU4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -131,6 +114,7 @@
         </div>
         <p>&copy; 2025 StepHub. Усі права захищені.</p>
     </footer>
+
     <script src="../scripts/script.js"></script>
 </body>
 </html>
