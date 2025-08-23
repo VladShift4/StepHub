@@ -359,86 +359,106 @@ footer {
 
 /* --- Початок коду для сторінки каталогу товарів (shoes.html) --- */
 
-.catalog-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
+/* --- ОНОВЛЕНІ СТИЛІ для панелі пошуку та сортування --- */
 
+/* Загальний контейнер панелі керування */
 .product-controls {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Дозволяє переносити елементи на мобільних пристроях */
     gap: 1.5rem;
     padding: 1.5rem;
     margin-bottom: 3rem;
     background-color: var(--surface-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    align-items: center;
 }
 
+/* Обгортка для поля пошуку та кнопки */
 .search-wrapper {
     display: flex;
-    flex-grow: 1;
+    align-items: center;
+    flex-grow: 1; /* Займає максимум доступного місця */
     min-width: 250px;
-}
-
-.search-wrapper i {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    left: 15px;
-    color: #aaa;
-}
-
-#searchInput {
-    width: 90%;
-    padding: 0.8rem 1rem 0.8rem 2rem;
     border: 2px solid #ddd;
-    border-radius: 30px;
-    font-size: 1rem;
+    border-radius: 50px; /* Робить обгортку заокругленою */
     transition: border-color var(--transition-speed) ease;
+    overflow: hidden; /* Ховає кути кнопки */
 }
 
-#searchInput:focus {
+.search-wrapper:focus-within {
+    border-color: var(--secondary-color); /* Підсвічування при фокусі */
+}
+
+/* Стиль для поля вводу */
+#searchInput {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+}
+
+/* Стиль для кнопки пошуку */
+.search-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed) ease;
+    align-self: stretch; /* Розтягує кнопку на всю висоту */
+}
+
+.search-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Стилі для випадаючих списків (сортування та фільтри) */
+.product-controls select {
+    /* Скидаємо стандартний вигляд */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Наші стилі */
+    background-color: transparent;
+    border: 2px solid #ddd;
+    padding: 0.8rem 2.5rem 0.8rem 1.5rem; /* Місце справа для стрілки */
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color var(--transition-speed) ease;
+    /* Додаємо кастомну стрілку */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2334495e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.product-controls select:hover,
+.product-controls select:focus {
     outline: none;
     border-color: var(--secondary-color);
 }
 
-.filters-wrapper {
-    display: flex;
-    gap: 1rem;
-    position: sticky;
-
+/* Правило для сітки (залишається без змін) */
+#catalog-grid, .product-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
-.filters-wrapper select {
-    padding: 0.8rem 0.3rem;
-    border: 2px solid #ddd;
-    border-radius: 50px;
-    background-color: white;
-    font-size: 1rem;
-    cursor: pointer;
-
-}
-
-.product-catalog-grid {
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 600px) {
-    .product-catalog-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Адаптивність для панелі керування */
+@media (max-width: 768px) {
+    .product-controls {
+        flex-direction: column;
+        align-items: stretch; /* Розтягуємо елементи на всю ширину */
     }
 }
-
-@media (min-width: 992px) {
-    .product-catalog-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 /* --- Кінець коду для сторінки каталогу --- */
 
 /* --- Початок коду для сторінки одного товару --- */
@@ -574,3 +594,4 @@ footer {
 .product-card a:hover {
     color: #000;
 }
+
