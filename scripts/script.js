@@ -106,3 +106,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Запускаємо функцію для всіх кнопок "Купити" на сторінці
     addBuyButtonListeners();
 });
+
