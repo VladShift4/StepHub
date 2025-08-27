@@ -44,7 +44,7 @@ header {
     color: var(--primary-color);
     text-decoration: none;
     transition:var(--accent-color) ease-in-out;
-    animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
 
 }
 
@@ -233,12 +233,13 @@ h2 {
 
 .buy-button {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: var(--accent-color);
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 50px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     border: 2px solid transparent;
     transition: all var(--transition-speed) ease;
 }
@@ -802,3 +803,175 @@ h4 a {
     }
 }
 
+/* Використовуємо шрифти сторінки */
+.order-container {
+    font-family: 'Arial', sans-serif; /* заміни на шрифт, який у тебе на сайті */
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+}
+
+.order-container textarea.order-message {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-family: inherit; /* наслідує шрифт контейнера */
+    font-size: 17px;
+    line-height: 1.4;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Кнопки */
+.order-container button {
+    font-family: inherit; /* такий же шрифт як на сторінці */
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px 0 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Основна кнопка генерації повідомлення */
+.order-container .generate-message {
+    background-color: #ff6b00;
+    color: #fff;
+}
+
+.order-container .generate-message:hover {
+    background-color: #e65c00;
+}
+
+/* Кнопка копіювання тексту */
+.order-container .copy-message {
+    background-color: #5b65ff;
+    color: #fff;
+}
+
+.order-container .copy-message:hover {
+    background-color: #6456ff;
+}
+
+/* Кнопка відкриття Instagram */
+.order-container .open-instagram {
+    background-color: #fc6060;
+    color: #fff;
+}
+
+.order-container .open-instagram:hover {
+    background-color: #fb6c6c;
+}
+
+/* Мобільна адаптивність */
+@media (max-width: 480px) {
+    .order-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .order-container button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/*Дизайн для списку товарів на сторінці "Оновлений каталог"*/
+:root {
+  --container-height: 498px;
+}
+
+section {
+  position: relative;
+  padding-right: 50px;
+  timeline-scope: --listTimeline;
+}
+
+.list {
+    max-height: var(--container-height);
+    border: 2px solid #000000;
+    border-radius: 5px;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-timeline: --listTimeline block;
+}
+
+.animation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-size: 50px 40px;
+    /* background image on bottom of css for readability */
+}
+
+@supports (animation-timeline: scroll()) {
+  .animation {
+    animation: moveBackground alternate linear;
+    animation-timeline: --listTimeline;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 calc(var(--container-height) / -1);
+  }
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.animation {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Isolation_Mode' data-name='Isolation Mode' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 633.33 680'%3E%3Cpath fill='%2328AFB0' d='M383.33,500c27.61,0,50,22.39,50,50,0,25.99-19.83,47.35-45.18,49.77l-4.82,.23H50c-27.61,0-50-22.39-50-50,0-25.99,19.83-47.35,45.18-49.77l4.82-.23H383.33Zm200-166.67c27.61,0,50,22.39,50,50s-22.39,50-50,50H50c-27.61,0-50-22.39-50-50s22.39-50,50-50H583.33Zm-200-166.67c27.61,0,50,22.39,50,50,0,25.99-19.83,47.35-45.18,49.77l-4.82,.23H50c-27.61,0-50-22.39-50-50,0-25.99,19.83-47.35,45.18-49.77l4.82-.23H383.33ZM583.33,0c27.61,0,50,22.39,50,50,0,25.99-19.83,47.35-45.18,49.77l-4.82,.23H50C22.39,100,0,77.61,0,50,0,24.01,19.83,2.65,45.18,.23l4.82-.23H583.33Z'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff8000;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e5e19;
+}
